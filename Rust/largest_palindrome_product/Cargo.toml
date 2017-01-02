@@ -1,0 +1,22 @@
+[package]
+name = "largest_palindrome_product"
+version = "0.1.0"
+authors = ["Eike Schulze <eike.schulze@web.de>"]
+
+[lib]
+name = "largest_palindrome_product_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "largest_palindrome_product"
+path = "src/main.rs"
+
+[dependencies]
+docopt = "0.6"
+rustc-serialize = "0.3"
+
+[profile.release]
+opt-level = 3
+debug = false
+debug-assertions = false
+lto = true
